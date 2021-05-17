@@ -1,24 +1,29 @@
-# README
+# vaccination_app
 
-This README would normally document whatever steps are necessary to get the
+
+## This app is designed to help authorities to schedule vaccination appointments with Users.
+
+---
+
+following steps are necessary to get the
 application up and running.
 
-Things you may want to cover:
 
-* Ruby version
 
-* System dependencies
+* Ruby version => 2.6.6
+
+* Database - Postgres
 
 * Configuration
 
-* Database creation
+To run this app locally: 
+```
+bundle install
+```
+```
+ rails db:setup
+```
+```
+rails s
+```
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
