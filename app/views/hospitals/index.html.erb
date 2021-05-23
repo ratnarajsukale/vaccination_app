@@ -3,13 +3,15 @@
   <h1><%= hospital.name %></h1>
   <p><%=hospital.address%></p>
   <p><%=hospital.slots%></p>
+  <% if current_user and current_user.staff? %>
 
-  <ul>
-    <li><%= link_to "show", hospital_path(hospital) %></li>
-    <li><%= link_to "Edit", edit_hospital_path(hospital) %></li>
-    <li><%= link_to "Delete", hospital_path(hospital),
-                    method: :delete,
-                    data: { confirm: "Are you sure?" } %></li>
-  </ul>
+    <ul>
+      <li><%= link_to "show", hospital_path(hospital) %></li>
+      <li><%= link_to "Edit", edit_hospital_path(hospital) %></li>
+      <li><%= link_to "Delete", hospital_path(hospital),
+                      method: :delete,
+                      data: { confirm: "Are you sure?" } %></li>
+    </ul>
+  <%end%>
 
 <%end%>
