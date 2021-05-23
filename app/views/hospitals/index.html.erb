@@ -1,0 +1,15 @@
+<% @hospitals.each do |hospital|%>
+  
+  <h1><%= hospital.name %></h1>
+  <p><%=hospital.address%></p>
+  <p><%=hospital.slots%></p>
+
+  <ul>
+    <li><%= link_to "show", hospital_path(hospital) %></li>
+    <li><%= link_to "Edit", edit_hospital_path(hospital) %></li>
+    <li><%= link_to "Delete", hospital_path(hospital),
+                    method: :delete,
+                    data: { confirm: "Are you sure?" } %></li>
+  </ul>
+
+<%end%>
