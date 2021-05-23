@@ -3,8 +3,8 @@ class HospitalsController < ApplicationController
 
   def authenticate_staff
     unless current_user and current_user.staff?
-      redirect_to root_path
-      flash.now[:notice] = "you are not auth"
+      redirect_to root_path, danger: "You are not authenticated user"
+       
     end
   end
 
