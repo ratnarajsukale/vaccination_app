@@ -1,4 +1,13 @@
 class HospitalsController < ApplicationController
+  before_action :authenticate_staff, only:[:new, :create, :edit, :update, :destroy]
+
+  def authenticate_staff
+    unless current_user and current_user.staff?
+      redirect_to root_path
+      flash.now[:notice] = "you are not auth"
+    end
+  end
+
   def index
     @hospitals = Hospital.all
   end
