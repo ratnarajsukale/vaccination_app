@@ -1,10 +1,15 @@
-Hospitails # new 
-<%= form_with model: @hospital do |form| %>
-  <%= form.label :name %>
-  <%= form.text_field :name %>
-  <%= form.label :address %>
-  <%= form.text_field :address, size: "60x10" %>
-  <%= form.label :Available_slots %>
-  <%= form.number_field :slots %>
-  <%= form.submit %>
-<% end %>
+<div class="container">
+  <div class="row">
+    <div class="col text-center">
+      <%= form_with model: @hospital do |form| %>
+        <%= form.label :name %><br>
+        <%= form.text_field :name %><br>
+        <%= form.label :address %><br>
+        <%= form.text_field :address, size: "60x10" %><br>
+        <%= form.label :Available_slots %><br>
+        <%= form.number_field :slots %><br>
+        <%= form.submit %>
+      <% end %>
+    </div>
+  </div>
+</div>
