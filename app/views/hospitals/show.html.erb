@@ -1,0 +1,13 @@
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title"><%= @hospital.name %></h5>
+    <h6 class="card-subtitle mb-2 text-muted"><%= @hospital.slots %> Slots Available</h6>
+    <p class="card-text"><%= @hospital.address %></p>
+    <% if current_user and current_user.staff? %>
+      <%= link_to "Edit", edit_hospital_path(@hospital.id), class: "card-link" %>
+      <%= link_to "Delete", hospital_path(@hospital.id), method: :delete,
+                  data: { confirm: "Are you sure?" }, class: "card-link"%>
+      <%= link_to "Create new", new_hospital_path, class: "card-link" %>
+   <%end%>
+  </div>
+</div>

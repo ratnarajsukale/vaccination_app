@@ -17,8 +17,8 @@
   <body>
     <div class="container-fluid bg-light">
       <%= render "shared/navbar" %>
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
+      <%= render "shared/flash_massages" %>
+      
       <%= yield %>
     </div>
   </body>

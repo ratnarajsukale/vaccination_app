@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="row">
+    <div class="col text-center">
+      <%= form_with model: @hospital do |form| %>
+        <%= form.label :name %><br>
+        <%= form.text_field :name %><br>
+        <%= form.label :address %><br>
+        <%= form.text_area :address, size: "60x10" %><br>
+        <%= form.label :Available_slots %><br>
+        <%= form.number_field :slots %><br>
+        <%= form.submit %>
+      <% end %>
+    </div>
+  </div>
+</div>
