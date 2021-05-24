@@ -2,9 +2,8 @@ class HospitalsController < ApplicationController
   before_action :authenticate_staff, only:[:new, :create, :edit, :update, :destroy]
 
   def authenticate_staff
-    unless current_user and current_user.staff?
-      redirect_to hospitals_path, danger: "You are not authenticated user for requested task!!"
-       
+    unless current_user && current_user.staff?
+      redirect_to hospitals_path, danger: "You are not authenticated user for requested task!!"   
     end
   end
 
