@@ -1,0 +1,12 @@
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title"><%= @booking.hospital.name%></h5>
+    <h6 class="card-subtitle mb-2 text-muted"><%= @booking.hospital.address%></h6>
+    <p class="card-text">Your appointment for vaccination is scheduled on <%= @booking.date %> </p>
+    <%= link_to "Edit", edit_booking_path(@booking.id), class: "card-link" %>
+    <%= link_to "Cancel Booking ", booking_path(@booking.id), method: :delete,
+                  data: { confirm: "Are you sure?" }, class: "card-link"%>
+    
+  </div>
+</div>
+

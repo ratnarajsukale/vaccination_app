@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="row">
+    <div class="col text-center">
+      <div class="badge bg-danger text-wrap fs-1" style="width: 18rem;">
+        <%= @hospital.name %>
+      </div><br>
+      <div class="badge bg-success text-wrap fs-4" style="width: 12rem;">
+        <%= @hospital.slots %> Available Slots
+      </div>
+      <% if @booking.errors.any? %>
+        <%= @booking.errors.full_messages %>
+      <% end %>
+
+      <%= form_with model: @booking, url: hospital_bookings_path, method: :post do |form| %>
+        <%= form.label :"select date" %><br>
+        <%= form.date_field :date %><br>
+        <%= form.hidden_field :hospital_id, value: params[:hospital_id] %>
+        <%= form.submit %>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+

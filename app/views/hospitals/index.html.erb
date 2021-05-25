@@ -8,6 +8,7 @@
              <%= link_to hospital.name, hospital_path(hospital.id), class: "fw-bold" %><br>
               <%= hospital.address %>
             </div>
+            <%= link_to "Book now", new_hospital_booking_path(hospital.id), class: "badge bg-primary rounded-pill" %>
             <span class="badge bg-primary rounded-pill"><%= hospital.slots %> Available Slots</span>
           </li>
         </ol>
