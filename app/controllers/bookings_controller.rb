@@ -12,7 +12,6 @@ class BookingsController < ApplicationController
     @hospital = Hospital.find(params[:hospital_id])
     if current_user.already_booked_slot
      redirect_to booking_path(current_user.booking), danger: "You already have your booking scheduled. cancel this booking to create new Appointment" 
-     
     else
       if @booking.save
         @booking.hospital.subtract_one_slot

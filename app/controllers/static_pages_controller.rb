@@ -2,6 +2,6 @@ class StaticPagesController < ApplicationController
   def index
   end
 
-  def show 
+  def my_bookings 
   end 
 end
