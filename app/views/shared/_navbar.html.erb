@@ -24,7 +24,16 @@
         <li class="nav-item">
           <%= link_to "All Hospitals", hospitals_path, class: "nav-link" %>        
         </li>
-
+        <% if current_user.booking %>
+          <li class="nav-item">
+            <%= link_to "My Bookings", booking_path(current_user.booking), class: "nav-link" %>        
+          </li>
+        <%else%>
+          <li class="nav-item">
+            <%= link_to "My Bookings", '/my_bookings', class: "nav-link" %>        
+          </li>
+        <%end%>
+        
       <% else %>
         <li>
           <%= link_to "Login", new_user_session_path, class: "nav-link" %>  

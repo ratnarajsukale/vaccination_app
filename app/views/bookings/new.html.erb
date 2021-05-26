@@ -10,7 +10,6 @@
       <% if @booking.errors.any? %>
         <%= @booking.errors.full_messages %>
       <% end %>
-
       <%= form_with model: @booking, url: hospital_bookings_path, method: :post do |form| %>
         <%= form.label :"select date" %><br>
         <%= form.date_field :date %><br>
