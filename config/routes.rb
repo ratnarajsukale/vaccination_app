@@ -2,7 +2,9 @@ Rails.application.routes.draw do
   devise_for :users
   root to: "static_pages#index"
   resources :hospitals
-  
-
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  resources :hospitals do
+    resources :bookings, only: [:new, :create] 
+  end
+  resources :bookings, only: [:show, :edit, :create, :destroy, :update]
+  get '/my_bookings', to: 'static_pages#my_bookings'
 end

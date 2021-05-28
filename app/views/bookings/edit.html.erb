@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="row">
+    <div class="col text-center">
+      <% if @booking.errors.any? %>
+        <%= @booking.errors.full_messages %>
+      <% end %>
+      <%= form_with model: @booking do |form| %>
+        <%= form.label :"select date" %><br>
+        <%= form.date_field :date %><br>
+        <%= form.submit %>
+      <% end %>
+    </div>
+  </div>
+</div>
