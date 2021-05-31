@@ -1,0 +1,14 @@
+  <%= image_tag attachments['vaccine.png'].url, alt: 'vaccine photo' %>
+  <h1> Hello <%= @user.name%> ,  following are details of your Appointment </h1>
+  <ul>
+    <li>   Hospital Name - <%= @user.booking.hospital.name %></li>
+    <li>   Hospital Address - <%= @user.booking.hospital.address%></li>
+    <li>   Scheduled Date - <%= @user.booking.date %></li>
+  </ul> 
+  <h2> Instructions for Appointment  </h2>
+  <ul>
+    <li>Make sure you bring print out of this mail.</li>
+    <li>Make sure you you have eaten something before taking vaccine.</li>
+    <li>Incase you are not available tomorrow please cancel or re-Schedule your appointment. </li>
+  </ul> 
+
