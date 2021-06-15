@@ -94,4 +94,3 @@ RSpec.configure do |config|
   Kernel.srand config.seed
 =end
 end
-require File.expand_path("../../config/environment", __FILE__) 

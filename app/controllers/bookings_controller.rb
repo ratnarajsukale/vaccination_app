@@ -1,9 +1,9 @@
 class BookingsController < ApplicationController
-  
 
   def new
     @booking = Booking.new
     @hospital = Hospital.find(params[:hospital_id])
+
   end
 
   def create
