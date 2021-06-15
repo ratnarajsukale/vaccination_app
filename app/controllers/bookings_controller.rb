@@ -14,6 +14,8 @@ class BookingsController < ApplicationController
      redirect_to booking_path(current_user.booking), danger: "You already have your booking scheduled. cancel this booking to create new Appointment" 
     else
       if @booking.save
+       
+        AppointmentMailer.appointment_scheduled(current_user).deliver_later(wait: 5.second)
         @booking.hospital.subtract_one_slot
         redirect_to booking_path(@booking)
       else

@@ -32,6 +32,16 @@ gem 'bootsnap', '>= 1.4.4', require: false
 gem 'devise'
 # create fake database
 gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
+#opens letter without sending them
+gem "letter_opener", group: :development
+
+group :development, :test do
+  
+  gem 'rspec-rails', '~> 3.5'
+  gem 'factory_girl_rails'
+  gem 'capybara'
+  gem 'database_cleaner'
+end
 
 
 group :development, :test do
@@ -52,7 +62,7 @@ end
 
 group :test do
   # Adds support for Capybara system testing and selenium driver
-  gem 'capybara', '>= 3.26'
+  
   gem 'selenium-webdriver'
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'
@@ -60,3 +70,5 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+gem "sidekiq", "~> 6.2"
