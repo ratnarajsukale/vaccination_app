@@ -1,3 +1,5 @@
-Appointment#appointment_scheduled
+Hello <%= @user.name%> ,  following are details of your Appointment
+Hospital Name - <%= @user.booking.hospital.name%>
+Hospital Address - <%= @user.booking.hospital.address%>
+Scheduled Date - <%= @user.booking.date %>
 
-<%= @greeting %>, find me in app/views/appointment_mailer/appointment_scheduled.text.erb
