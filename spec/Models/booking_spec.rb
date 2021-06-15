@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe Booking, type: :model do
-  
   subject(:booking1) { FactoryBot.create(:booking) }
 
   context "has valid factory" do
@@ -23,8 +22,7 @@ RSpec.describe Booking, type: :model do
   end
 
   context "ActiveRecord Associations" do
-
-    it { expect(subject).to belong_to(:hospital) }
+   it { expect(subject).to belong_to(:hospital) }
     
     it { expect(subject).to belong_to(:user) }
   end

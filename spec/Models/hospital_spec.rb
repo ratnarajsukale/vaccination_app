@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe Hospital, type: :model do
-  
   subject(:hospital1) { FactoryBot.create(:hospital) }
 
   context "has valid factory" do
