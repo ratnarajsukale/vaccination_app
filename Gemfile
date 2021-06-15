@@ -38,9 +38,10 @@ gem "letter_opener", group: :development
 group :development, :test do
   
   gem 'rspec-rails', '~> 3.5'
-  gem 'factory_girl_rails'
+  gem 'factory_bot_rails'
   gem 'capybara'
   gem 'database_cleaner'
+  gem 'shoulda-matchers', '~> 4.0'
 end
 
 

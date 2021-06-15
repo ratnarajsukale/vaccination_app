@@ -1,7 +1,7 @@
 # This file is copied to spec/ when you run 'rails generate rspec:install'
 require 'spec_helper'
 ENV['RAILS_ENV'] ||= 'test'
-
+# rails_helper.rb
 require File.expand_path('../config/environment', __dir__)
 
 # Prevent database truncation if the environment is production
@@ -18,7 +18,7 @@ rescue ActiveRecord::PendingMigrationError => e
 end
 RSpec.configure do |config|
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
-  config.include FactoryGirl::Syntax::Methods
+  config.include FactoryBot::Syntax::Methods
   config.include Devise::Test::ControllerHelpers, type: :controller
 
   # If you're not using ActiveRecord, or you'd prefer not to run each of your
@@ -69,4 +69,11 @@ RSpec.configure do |config|
   # config.filter_gems_from_backtrace("gem name")
 
 
+end
+
+Shoulda::Matchers.configure do |config|
+  config.integrate do |with|
+    with.test_framework :rspec
+    with.library :rails
+  end
 end
