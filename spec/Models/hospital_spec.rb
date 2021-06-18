@@ -4,7 +4,7 @@ RSpec.describe Hospital, type: :model do
   subject(:hospital1) { FactoryBot.create(:hospital) }
 
   context "has valid factory" do
-  	it "can be created" do
+    it "can be created" do
   	  expect(subject).to be_valid
   	end
   end 

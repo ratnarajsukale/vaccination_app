@@ -4,8 +4,8 @@ RSpec.describe User, type: :model do
   subject(:user1) { FactoryBot.create(:user) }
 
   describe "has valid factory" do
-  	it "can be created" do
-  		expect(subject).to be_valid
+    it "can be created" do
+  	  expect(subject).to be_valid
   	end
   end 
 

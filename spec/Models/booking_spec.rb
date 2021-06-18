@@ -4,7 +4,7 @@ RSpec.describe Booking, type: :model do
   subject(:booking1) { FactoryBot.create(:booking) }
 
   context "has valid factory" do
-  	it "can be created" do
+    it "can be created" do
   	  expect(subject).to be_valid
   	end
   end 
