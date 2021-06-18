@@ -6,7 +6,7 @@ RSpec.describe Hospital, type: :model do
   context "has valid factory" do
     it "can be created" do
       expect(subject).to be_valid
-  	end
+    end
   end 
 
   context "check validations" do
