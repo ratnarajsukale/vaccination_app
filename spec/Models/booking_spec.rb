@@ -5,8 +5,8 @@ RSpec.describe Booking, type: :model do
 
   context "has valid factory" do
     it "can be created" do
-  	  expect(subject).to be_valid
-  	end
+      expect(subject).to be_valid
+    end
   end 
 
   context "validations" do
