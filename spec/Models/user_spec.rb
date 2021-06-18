@@ -5,7 +5,7 @@ RSpec.describe User, type: :model do
 
   describe "has valid factory" do
     it "can be created" do
-  	  expect(subject).to be_valid
+      expect(subject).to be_valid
   	end
   end 
 
