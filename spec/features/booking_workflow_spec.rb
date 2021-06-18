@@ -53,7 +53,5 @@ RSpec.feature "BookingWorkflows", type: :feature do
         expect(page).to have_content 'booking deleted successfully.'
       end
     end
-
-    
   end
 end

@@ -5,7 +5,7 @@ RSpec.describe Booking, type: :model do
 
   context "has valid factory" do
   	it "can be created" do
-  		expect(subject).to be_valid
+  	  expect(subject).to be_valid
   	end
   end 
 
@@ -22,7 +22,7 @@ RSpec.describe Booking, type: :model do
   end
 
   context "ActiveRecord Associations" do
-   it { expect(subject).to belong_to(:hospital) }
+    it { expect(subject).to belong_to(:hospital) }
     
     it { expect(subject).to belong_to(:user) }
   end
