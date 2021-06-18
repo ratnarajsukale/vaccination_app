@@ -10,7 +10,6 @@ RSpec.feature "SigninWorkflows", type: :feature do
         fill_in 'user_email', with: 'akash@example.com'
         fill_in 'user_password', with: '222222'
         fill_in 'user_password_confirmation', with: '222222'
-
       end
     end
 

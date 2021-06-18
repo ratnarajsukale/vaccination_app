@@ -6,6 +6,5 @@ FactoryBot.define do
     password { 'pass123456' }
     password_confirmation { 'pass123456' }
     staff { false }
-    
   end
 end
