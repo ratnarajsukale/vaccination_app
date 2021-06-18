@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.feature "BookingWorkflows", type: :feature do
-  context 'create new user' do 
+  context 'booking crud' do 
     before(:each) do
       @user1 = FactoryBot.create(:user)
       login_as(@user1, :scope => :user)
