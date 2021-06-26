@@ -17,7 +17,8 @@ class BookingsController < ApplicationController
        
         AppointmentMailer.appointment_scheduled(current_user).deliver_later(wait: 5.second)
         @booking.hospital.subtract_one_slot
-        redirect_to booking_path(@booking)
+        redirect_to booking_path(@booking), success: "booking created please check you email."
+        
       else
         render "new"
       end
@@ -32,7 +33,7 @@ class BookingsController < ApplicationController
     @booking = Booking.find(params[:id])
 
     if @booking.update(booking_params)
-      redirect_to @booking
+      redirect_to @booking, success: "booking updated successfully."
     else
       render "edit"
     end
@@ -42,7 +43,7 @@ class BookingsController < ApplicationController
     @booking= Booking.find(params[:id])
     @booking.destroy
     @booking.hospital.add_one_slot
-    redirect_to hospitals_path
+    redirect_to hospitals_path, success: "booking deleted successfully." 
   end
   
   def show
